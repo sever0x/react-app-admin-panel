@@ -7,17 +7,22 @@ const HomePage = () => {
         <Container>
             <Paper elevation={3} style={{ padding: '20px', marginTop: '20px' }}>
                 <Typography variant="h4" gutterBottom>
-                    Welcome to Ryan Gosling's Admin Panel!
+                    Ласкаво просимо до Адмін-панелі Раяна Гослінга!
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    You are now in control of the amazing Telegram bot created by Ryan Gosling. Feel the power of the
-                    administrative features and manage your conversations with style.
+                    Тепер ви контролюєте неймовірного телеграм-бота, створеного Раяном Гослінгом. Відчуйте силу адміністративних можливостей та управляйте своїми розмовами зі смаком.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Explore the <Link to="/logs">Logs</Link> to see the interactions
+                    Досліджуйте <Link to="/logs">Logs</Link>, щоб переглядати взаємодії.
                 </Typography>
-                <Typography variant="body1">
-                    Not registered yet? <Link to="/register">Register</Link> now and dive into the world of Ryan Gosling's bot!
+                <Typography variant="body1" paragraph>
+                    Ще не зареєстровані? <Link to="/register">Зареєструйтесь</Link> зараз і зануртесь у світ бота від Раяна Гослінга!
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                    Для реєстрації вам потрібен секретний ключ, який ви можете дізнатися у автора цього бота та адмін панелі. GitHub: <a href="https://github.com/sever0x" target="_blank" rel="noopener noreferrer">github/sever0x</a>.
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                    Також перевірте бота в Телеграмі: <a href="https://t.me/ryan_gosling_drive_gpt_bot" target="_blank" rel="noopener noreferrer">Ryan Gosling's Bot</a>.
                 </Typography>
             </Paper>
         </Container>
