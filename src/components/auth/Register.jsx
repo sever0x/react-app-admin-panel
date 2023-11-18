@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Button, Container, CssBaseline, Grid, Paper, TextField, Typography } from '@mui/material';
+import React, {useState} from 'react';
+import {Button, Container, CssBaseline, Paper, TextField, Typography} from '@mui/material';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import { API_URL } from '../../constants';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ const Register = () => {
 
     const handleRegister = () => {
         axios
-            .post('http://localhost:8080/admin/register', {
+            .post(`${API_URL}/admin/register`, {
                 username,
                 password,
                 secret: secretKey,

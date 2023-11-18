@@ -3,6 +3,7 @@ import {Button, Stack, TextField, Typography} from '@mui/material';
 import axios from 'axios';
 import LogTable from './LogTable';
 import {useNavigate} from "react-router-dom";
+import { API_URL } from '../../constants';
 
 const Logs = () => {
     const [chatId, setChatId] = useState('');
@@ -24,7 +25,7 @@ const Logs = () => {
         if (username) params.username = username;
 
         axios
-            .get('http://localhost:8080/logs', {
+            .get(`${API_URL}/logs`, {
                 params,
                 headers: {
                     Authorization: `Bearer ${token}`,

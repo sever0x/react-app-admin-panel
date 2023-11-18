@@ -1,15 +1,7 @@
 import React, {useState} from 'react';
-import {
-    Button,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    Stack,
-    TextField
-} from '@mui/material';
+import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField} from '@mui/material';
 import axios from 'axios';
+import {API_URL} from "../../constants";
 
 const SendMessageButton = ({chatId, messageId}) => {
     const [open, setOpen] = useState(false);
@@ -29,7 +21,7 @@ const SendMessageButton = ({chatId, messageId}) => {
 
         axios
             .post(
-                'http://localhost:8080/admin/send',
+                `${API_URL}/admin/send`,
                 {
                     chatId,
                     message,

@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
-import {Button, Typography, Stack} from '@mui/material';
+import {Button, Stack, Typography} from '@mui/material';
 
 const AuthenticatedMenu = () => {
     const [token, setToken] = useState(localStorage.getItem('jwtToken'));

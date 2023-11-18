@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Container, CssBaseline, Grid, Paper, TextField, Typography } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../constants';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -13,7 +14,7 @@ const Login = () => {
 
         axios
             .post(
-                'http://localhost:8080/admin/login',
+                `${API_URL}/admin/login`,
                 {},
                 {
                     headers: {
